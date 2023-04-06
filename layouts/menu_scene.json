@@ -50,34 +50,6 @@
 					}
 				},
 				{
-					"type": "introCinematic",
-					"properties": {
-						"webm-source": "",
-						"ogg-theora-source": "",
-						"h264-source": "Intro finale.mp4",
-						"autoplay": "yes",
-						"play-in-background": true,
-						"initially-visible": true
-					},
-					"uid": 211,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 320,
-						"height": 180,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
 					"type": "startMenuButton",
 					"properties": {
 						"initially-visible": true,
@@ -88,7 +60,20 @@
 					},
 					"uid": 367,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Orbite": {
+							"properties": {
+								"speed": 180,
+								"acceleration": 0,
+								"primary-axis": 5,
+								"secondary-axis": 0,
+								"offset-angle": 0,
+								"match-rotation": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
 					"world": {
 						"x": 16,
 						"y": 80,
@@ -104,6 +89,34 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "introCinematic",
+					"properties": {
+						"webm-source": "",
+						"ogg-theora-source": "",
+						"h264-source": "Intro finale.mp4",
+						"autoplay": "yes",
+						"play-in-background": true,
+						"initially-visible": true
+					},
+					"uid": 211,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 240,
+						"y": 48,
+						"width": 320,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
 					}
 				}
 			],

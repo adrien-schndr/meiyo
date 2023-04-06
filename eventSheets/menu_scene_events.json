@@ -42,6 +42,16 @@
 			"sid": 271637271884574
 		},
 		{
+			"eventType": "variable",
+			"name": "buttonX",
+			"type": "number",
+			"initialValue": "16",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 579960749279467
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -64,84 +74,6 @@
 			],
 			"sid": 452033740124469,
 			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 521495840569439
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 741177112281727,
-					"parameters": {
-						"variable": "lum",
-						"comparison": 4,
-						"value": "-1"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 159835848921790,
-					"parameters": {
-						"variable": "startButtonClicked",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 395731865405061,
-					"parameters": {
-						"variable": "lum",
-						"value": "lum-1"
-					}
-				},
-				{
-					"id": "set-layout-effect-parameter",
-					"objectClass": "System",
-					"sid": 510229774732299,
-					"parameters": {
-						"effect": "\"Brightness\"",
-						"parameter-index": "0",
-						"value": "lum"
-					}
-				}
-			],
-			"sid": 663366485230544
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 715024455328402,
-					"parameters": {
-						"variable": "lum",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 945920962230146,
-					"parameters": {
-						"layout": "winter_scene"
-					}
-				}
-			],
-			"sid": 597663899934235
 		},
 		{
 			"eventType": "block",
@@ -210,395 +142,6 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 126982843042397,
-					"parameters": {
-						"variable": "lum",
-						"comparison": 4,
-						"value": "-1"
-					}
-				},
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 718321835277311
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 193707371211242,
-					"parameters": {
-						"variable": "lum",
-						"comparison": 5,
-						"value": "100"
-					},
-					"isInverted": true
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 822537414172471,
-					"parameters": {
-						"variable": "startButtonClicked",
-						"comparison": 0,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 954519978487885,
-					"parameters": {
-						"variable": "lum",
-						"value": "lum+1"
-					}
-				},
-				{
-					"id": "set-layout-effect-parameter",
-					"objectClass": "System",
-					"sid": 516531629821054,
-					"parameters": {
-						"effect": "\"Brightness\"",
-						"parameter-index": "0",
-						"value": "lum"
-					}
-				}
-			],
-			"sid": 325619252429987
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "has-ended",
-					"objectClass": "introCinematic",
-					"sid": 195830985359676
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "introCinematic",
-					"sid": 928078239864912
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 559125676357485,
-					"parameters": {
-						"variable": "onPauseMenu",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 332732410899599,
-			"isOrBlock": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-playing",
-					"objectClass": "introCinematic",
-					"sid": 245875057459615
-				},
-				{
-					"id": "key-is-down",
-					"objectClass": "Keyboard",
-					"sid": 291225063936931,
-					"parameters": {
-						"key": 32
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "introCinematic",
-					"sid": 244742879012912
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 316012626238321,
-					"parameters": {
-						"variable": "onPauseMenu",
-						"value": "0"
-					}
-				}
-			],
-			"sid": 848134838249163
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-destroyed",
-					"objectClass": "introCinematic",
-					"sid": 500455158836728
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 439049035863066,
-					"parameters": {
-						"variable": "isIntroCinematicOver",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-effect-parameter",
-					"objectClass": "menuWallpaper",
-					"sid": 503763762515475,
-					"parameters": {
-						"effect": "\"Brightness\"",
-						"parameter-index": "0",
-						"value": "100"
-					}
-				},
-				{
-					"id": "set-effect-parameter",
-					"objectClass": "tooltipText",
-					"sid": 402233666768868,
-					"parameters": {
-						"effect": "\"Brightness\"",
-						"parameter-index": "0",
-						"value": "100"
-					}
-				}
-			],
-			"sid": 347789260625877
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 699564556831495,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "startMenuButton"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 148385662075765,
-					"parameters": {
-						"variable": "startButtonClicked",
-						"comparison": 0,
-						"value": "0"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 216814571988096,
-					"parameters": {
-						"variable": "isIntroCinematicOver",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 153671254298372,
-					"parameters": {
-						"variable": "startButtonClicked",
-						"value": "1"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 757749949758221,
-					"parameters": {
-						"variable": "deathCounter",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 857424655058071,
-					"parameters": {
-						"variable": "lum",
-						"value": "100"
-					}
-				}
-			],
-			"sid": 869179274169482
-		},
-		{
-			"eventType": "block",
-			"conditions": [],
-			"actions": [],
-			"sid": 115683401459276
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 330968977284363,
-					"parameters": {
-						"first-value": "tooltipText.Opacity",
-						"comparison": 0,
-						"second-value": "0"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 821289882065078,
-					"parameters": {
-						"variable": "isIntroCinematicOver",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 243215763984229,
-					"parameters": {
-						"variable": "opacityStatus",
-						"value": "\"aug\""
-					}
-				}
-			],
-			"sid": 847799283035230,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 294004577412032,
-					"parameters": {
-						"variable": "isIntroCinematicOver",
-						"comparison": 0,
-						"value": "1"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 207231499621547,
-					"parameters": {
-						"variable": "opacityStatus",
-						"comparison": 0,
-						"value": "\"dim\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "tooltipText",
-					"sid": 203639012053611,
-					"parameters": {
-						"opacity": "tooltipText.Opacity-1"
-					}
-				}
-			],
-			"sid": 500162704003653,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-two-values",
-					"objectClass": "System",
-					"sid": 240673132670421,
-					"parameters": {
-						"first-value": "tooltipText.Opacity",
-						"comparison": 0,
-						"second-value": "100"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 578444090841962,
-					"parameters": {
-						"variable": "isIntroCinematicOver",
-						"comparison": 0,
-						"value": "1"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 822742775964274,
-					"parameters": {
-						"variable": "opacityStatus",
-						"value": "\"dim\""
-					}
-				}
-			],
-			"sid": 391515324273711,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 477123998324764,
-					"parameters": {
-						"variable": "isIntroCinematicOver",
-						"comparison": 0,
-						"value": "1"
-					}
-				},
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 225035149835419,
-					"parameters": {
-						"variable": "opacityStatus",
-						"comparison": 0,
-						"value": "\"aug\""
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-opacity",
-					"objectClass": "tooltipText",
-					"sid": 333297714806177,
-					"parameters": {
-						"opacity": "tooltipText.Opacity+1"
-					}
-				}
-			],
-			"sid": 612747225263027,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
 					"sid": 951765148475008,
 					"parameters": {
 						"variable": "onPauseMenu",
@@ -614,6 +157,15 @@
 					"sid": 273449582315699
 				},
 				{
+					"id": "move-to-object",
+					"objectClass": "introCinematic",
+					"sid": 377656739527420,
+					"parameters": {
+						"where": "behind",
+						"object": "startMenuButton"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 432461297405111,
@@ -624,6 +176,355 @@
 				}
 			],
 			"sid": 740483339896885
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "OutroAnimation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 798780736002677,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "startMenuButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 349322394134790,
+							"parameters": {
+								"variable": "startButtonClicked",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 982071826387962,
+							"parameters": {
+								"variable": "isIntroCinematicOver",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 149586380000403,
+							"parameters": {
+								"variable": "startButtonClicked",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 297748445749430,
+							"parameters": {
+								"variable": "deathCounter",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 512087699796599,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 224016701646575
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 747147699712212
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 133054878760041,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 4,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 521410395579917,
+							"parameters": {
+								"variable": "startButtonClicked",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 481922967318686,
+							"parameters": {
+								"variable": "lum",
+								"value": "lum-1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 303104183292029,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "lum"
+							}
+						}
+					],
+					"sid": 715876336056125
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 364338126662093,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 807440551705497,
+							"parameters": {
+								"layout": "winter_scene"
+							}
+						}
+					],
+					"sid": 385415409271809
+				}
+			],
+			"sid": 610268425057621
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "IntroCinematic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 978607531558505,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 4,
+								"value": "-1"
+							}
+						},
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 681027471193926
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 987436418836072,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 5,
+								"value": "100"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 529252632539666,
+							"parameters": {
+								"variable": "startButtonClicked",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 411687051974353,
+							"parameters": {
+								"variable": "lum",
+								"value": "lum+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 597672437821485,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "lum"
+							}
+						}
+					],
+					"sid": 747965067296050
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-ended",
+							"objectClass": "introCinematic",
+							"sid": 543286390693270
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "introCinematic",
+							"sid": 449825179073393
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "introCinematic",
+							"sid": 989650058178865,
+							"parameters": {
+								"where": "behind",
+								"object": "startMenuButton"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 470236515585911,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 805242122068368,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-playing",
+							"objectClass": "introCinematic",
+							"sid": 675824402394888
+						},
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 844541111980043,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "introCinematic",
+							"sid": 867669348662407
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "introCinematic",
+							"sid": 661985138630658,
+							"parameters": {
+								"where": "behind",
+								"object": "startMenuButton"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 201764807121559,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 762611650024227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-destroyed",
+							"objectClass": "introCinematic",
+							"sid": 306261009422793
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 856451184705512,
+							"parameters": {
+								"variable": "isIntroCinematicOver",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "menuWallpaper",
+							"sid": 814173846603694,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "tooltipText",
+							"sid": 426721890467601,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 563126539772927
+				}
+			],
+			"sid": 684893085589039
 		}
 	],
 	"sid": 548122809417691
