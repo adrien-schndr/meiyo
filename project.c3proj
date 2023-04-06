@@ -1,0 +1,501 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 33600,
+	"name": "Gr3v1ty",
+	"runtime": "c3",
+	"useWorker": "worker",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Navigateur",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Clavier",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Souris",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particules",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Info plate-forme",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Texte",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Arrière-plan Répété",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "video",
+			"name": "Vidéo",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fondu",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Orbit",
+			"name": "Orbite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Plate-forme",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Défiler vers",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solide",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "brightness",
+			"name": "Luminosité",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Niveaux de gris",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pulse",
+			"name": "Pulsation",
+			"author": "Danguafer/Silexars",
+			"bundled": false
+		}
+	],
+	"uniqueId": "0d5j15m9t5l",
+	"objectTypes": {
+		"items": [
+			"player",
+			"startMenuButton"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"menuWallpaper",
+					"tooltipText",
+					"introCinematic"
+				],
+				"subfolders": [],
+				"name": "menuObjects"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"clouds",
+							"mountains",
+							"sky"
+						],
+						"subfolders": [],
+						"name": "backgroundTextures"
+					},
+					{
+						"items": [
+							"winterDirtCenterCenter",
+							"winterDirtCenterRight",
+							"winterDirtDownCenter",
+							"winterDirtDownLeft",
+							"winterDirtDownRight",
+							"winterDirtLeftCenter",
+							"winterDirtTopCenter",
+							"winterDirtTopLeft",
+							"winterDirtTopRight"
+						],
+						"subfolders": [],
+						"name": "dirtTexturesCollision"
+					},
+					{
+						"items": [
+							"winterArchBottomLeft",
+							"winterArchBottomRight",
+							"winterArchTopLeft",
+							"winterArchTopRight"
+						],
+						"subfolders": [],
+						"name": "archTextures"
+					},
+					{
+						"items": [
+							"winterBrancheDroite",
+							"winterBrancheGauche",
+							"winterTronc",
+							"winterStickTexture"
+						],
+						"subfolders": [],
+						"name": "treeTextures"
+					},
+					{
+						"items": [
+							"winterMob0",
+							"winterMob1",
+							"winterMob2",
+							"spikes"
+						],
+						"subfolders": [],
+						"name": "mobs"
+					},
+					{
+						"items": [
+							"snowParticles"
+						],
+						"subfolders": [],
+						"name": "particles"
+					}
+				],
+				"name": "winterScene"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"deathCount",
+							"scoreDisaplay",
+							"deathbackground"
+						],
+						"subfolders": [],
+						"name": "deathCounting"
+					},
+					{
+						"items": [
+							"Browser",
+							"Keyboard",
+							"Mouse",
+							"PlatformInfo"
+						],
+						"subfolders": [],
+						"name": "inputParameters"
+					},
+					{
+						"items": [
+							"blackSides",
+							"endTrigger"
+						],
+						"subfolders": [],
+						"name": "detectionObjects"
+					},
+					{
+						"items": [
+							"dangerSymbol",
+							"arrowSymbol",
+							"gravitySymbols"
+						],
+						"subfolders": [],
+						"name": "tooltipsIcons"
+					},
+					{
+						"items": [
+							"escapeMenucontinue",
+							"escapeMenuleave",
+							"escapeMenurestart",
+							"pauseMenuButton"
+						],
+						"subfolders": [],
+						"name": "menuPause"
+					}
+				],
+				"name": "systems"
+			},
+			{
+				"items": [
+					"grass",
+					"springBackground",
+					"springMob0",
+					"springMob1"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"springBrancheGauche",
+							"springBrancheDroite",
+							"springStickLight",
+							"springTronc",
+							"springStickDark",
+							"arch",
+							"grass_1",
+							"grass_2",
+							"grass_3",
+							"grass_4"
+						],
+						"subfolders": [],
+						"name": "treeTextures"
+					},
+					{
+						"items": [
+							"leaves"
+						],
+						"subfolders": [],
+						"name": "leavesTextures"
+					}
+				],
+				"name": "springScene"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"menu_scene",
+			"spring_scene",
+			"winter_scene"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"menu_scene_events",
+			"spring_scene_events",
+			"winter_scene_events"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [
+				{
+					"name": "Intro finale.mp4",
+					"type": "video/mp4",
+					"sid": 725954477107079,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "Pixellari.ttf",
+					"type": "application/font-sfnt",
+					"sid": 327305599220861,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 301922972971234,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 377837377205438,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 855291743114536,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 396338150707682,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 829931812569844,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 416293822194801,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 860589312435495,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "cover",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "high",
+		"renderingMode": "2d",
+		"anisotropicFiltering": "4x",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "percent",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders"
+	},
+	"viewportWidth": 320,
+	"viewportHeight": 180,
+	"firstLayout": "menu_scene"
+}

@@ -1,0 +1,2022 @@
+{
+	"name": "winter_scene_events",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "onPauseMenu",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 411424315406017
+		},
+		{
+			"eventType": "variable",
+			"name": "currentAnimation",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 673785098958184
+		},
+		{
+			"eventType": "variable",
+			"name": "winterMob0_X",
+			"type": "number",
+			"initialValue": "592",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 162940549372681
+		},
+		{
+			"eventType": "variable",
+			"name": "mob1_X",
+			"type": "number",
+			"initialValue": "1216",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 771857949791450
+		},
+		{
+			"eventType": "variable",
+			"name": "mob2_X",
+			"type": "number",
+			"initialValue": "1120",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 304827766289336
+		},
+		{
+			"eventType": "variable",
+			"name": "isDead",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 461441161124445
+		},
+		{
+			"eventType": "variable",
+			"name": "isEnd",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 843390393799550
+		},
+		{
+			"eventType": "variable",
+			"name": "deathCounter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 464465253690274
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Winter Animations System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "player",
+							"sid": 892630501848666,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "player",
+							"sid": 432298998402979,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 787359672557318,
+							"parameters": {
+								"variable": "currentAnimation",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 225297660101135,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 215166171752672,
+							"parameters": {
+								"animation": "\"walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 539239945988495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 837427870819038,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 966584332906141,
+							"parameters": {
+								"variable": "currentAnimation",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "player",
+							"sid": 521642381953032,
+							"behaviorType": "Platform",
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 566103687834813,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 545817964691081,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 557803351547914
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 879598573161465,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 579330830998258,
+							"parameters": {
+								"variable": "currentAnimation",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "is-jumping",
+							"objectClass": "player",
+							"sid": 705439320015844,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "player",
+							"sid": 770688330404440,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 266049606015580,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 974838062784427
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 145709217185304,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 307661724050123,
+							"parameters": {
+								"variable": "currentAnimation",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "player",
+							"sid": 402831977537980,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "player",
+							"sid": 756492218438841,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 654294912675035,
+							"parameters": {
+								"animation": "\"fall\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 635564581430111
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 290509043038994,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 804065616062403,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "player",
+							"sid": 241937361244907,
+							"parameters": {
+								"animation": "\"die\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "player",
+							"sid": 224833163740329,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 563690773215810
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 793683661994746,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 934758569826266,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "player",
+							"sid": 464373468933125,
+							"parameters": {
+								"animation": "\"die\""
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "player",
+							"sid": 871581405425193,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 839761564065309
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 793306211644129,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 830693931664205,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 627440017210083,
+							"parameters": {
+								"object": "pauseMenuButton"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 308996214512444,
+							"parameters": {
+								"variable": "currentAnimation",
+								"value": "player.AnimationName"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 910082002439345,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 240750108192565
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 447791183780119,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "player",
+							"sid": 666617359048777,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "player",
+							"sid": 900744207666898,
+							"parameters": {
+								"animation": "\"attack\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 502184526192430,
+							"parameters": {
+								"animation": "currentAnimation",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 679927248645039,
+							"parameters": {
+								"variable": "currentAnimation",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 256997865857756
+				}
+			],
+			"sid": 952499279412009
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mob System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "winterMob0",
+							"sid": 993773481206941,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "winterMob0_X-48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "winterMob0",
+							"sid": 649226862221940,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 421900244683419
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "winterMob0",
+							"sid": 185394678214073,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "winterMob0_X+48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "winterMob0",
+							"sid": 126352602817487,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 997180123499040
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "winterMob1",
+							"sid": 118487155068562,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "mob1_X-48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "winterMob1",
+							"sid": 478379634724002,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 961092607780890
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "winterMob1",
+							"sid": 168908473128229,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "mob1_X+48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "winterMob1",
+							"sid": 326778815182803,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 965782668863846
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "winterMob2",
+							"sid": 928690950045274,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "mob2_X-48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "winterMob2",
+							"sid": 803418174292871,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 742593809904016
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "winterMob2",
+							"sid": 559049562602749,
+							"parameters": {
+								"comparison": 5,
+								"x-co-ordinate": "mob2_X+48"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "winterMob2",
+							"sid": 334480916171522,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 548433979355998
+				}
+			],
+			"sid": 120689728797998
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dead Events",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 842057707148654,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "player",
+							"sid": 456414114070379,
+							"parameters": {
+								"object": "spikes"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 813081266238684,
+							"parameters": {
+								"variable": "isDead",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 970005869088923,
+							"parameters": {
+								"variable": "deathCounter",
+								"value": "deathCounter+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 494620688265821,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 251041546948193,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 551323008753302
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "player",
+							"sid": 966053296623145,
+							"parameters": {
+								"object": "winterMob0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 269689332448845,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 658968111613994,
+							"parameters": {
+								"variable": "isDead",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 186035577809356,
+							"parameters": {
+								"variable": "deathCounter",
+								"value": "deathCounter+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 929713131043752,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 133778686069008,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 316062601670976
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "player",
+							"sid": 259053816508880,
+							"parameters": {
+								"object": "winterMob1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 349565099139521,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 272603999937517,
+							"parameters": {
+								"variable": "isDead",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 293629276242311,
+							"parameters": {
+								"variable": "deathCounter",
+								"value": "deathCounter+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 140117575573910,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 202049213642546,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 874365542526248
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "player",
+							"sid": 626861862524959,
+							"parameters": {
+								"object": "winterMob2"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 112707199848743,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 357838769941970,
+							"parameters": {
+								"variable": "isDead",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 839095644051863,
+							"parameters": {
+								"variable": "deathCounter",
+								"value": "deathCounter+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 617199583495066,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 191042944649320,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 494035670305145
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "player",
+							"sid": 238236906648223,
+							"parameters": {
+								"comparison": 5,
+								"y-co-ordinate": "832"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 192580041483945,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 921976077553592,
+							"parameters": {
+								"variable": "isDead",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 613402316551175,
+							"parameters": {
+								"variable": "deathCounter",
+								"value": "deathCounter+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 454537503694848,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 498857881196755,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 534440986533267
+				}
+			],
+			"sid": 339665196486502
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dead Animation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 755015225326040,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 299568938636667,
+							"parameters": {
+								"animation": "\"die\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-max-speed",
+							"objectClass": "player",
+							"sid": 838914103070749,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "0"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "player",
+							"sid": 539430074985223,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "0"
+							}
+						},
+						{
+							"id": "set-max-fall-speed",
+							"objectClass": "player",
+							"sid": 215846266688630,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-fall-speed": "0"
+							}
+						},
+						{
+							"id": "set-gravity",
+							"objectClass": "player",
+							"sid": 595435362981733,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "0"
+							}
+						}
+					],
+					"sid": 787079094434350
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-animation-playing",
+							"objectClass": "player",
+							"sid": 972196918357613,
+							"parameters": {
+								"animation": "\"die\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-speed",
+							"objectClass": "player",
+							"sid": 905961752270259,
+							"parameters": {
+								"speed": "4"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 611648312808059,
+							"parameters": {
+								"seconds": "1.25"
+							}
+						},
+						{
+							"id": "set-animation-speed",
+							"objectClass": "player",
+							"sid": 185611398573490,
+							"parameters": {
+								"speed": "0"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "player",
+							"sid": 174301039924031,
+							"parameters": {
+								"frame-number": "5"
+							}
+						}
+					],
+					"sid": 864689098630140
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 105307227183311
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 566873126060070,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 931338123268299,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 179613969281553,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "lum"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 362266769655968,
+							"parameters": {
+								"variable": "lum",
+								"value": "lum-1"
+							}
+						}
+					],
+					"sid": 994607722549986
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 510240033616687,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 280316799688211,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 405580658965304
+						}
+					],
+					"sid": 305307744486742
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 424792127497367,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 587394651112905,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 0,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 730112957797542,
+							"parameters": {
+								"variable": "lum",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 262515351249959
+				}
+			],
+			"sid": 808475382080418
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Winter Init Animation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-fullscreen",
+							"objectClass": "Browser",
+							"sid": 151433158088593,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "request-fullscreen",
+							"objectClass": "Browser",
+							"sid": 436942443013789,
+							"parameters": {
+								"mode": "stretch-letterbox-scale",
+								"navigation-ui": "auto"
+							}
+						}
+					],
+					"sid": 359947946002053,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 499991435929534
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 953405489280316,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 295841622045353,
+							"parameters": {
+								"variable": "isEnd",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 959362144733925,
+							"parameters": {
+								"variable": "isDead",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 875987932810304,
+							"parameters": {
+								"variable": "currentAnimation",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 295126887245091,
+							"parameters": {
+								"variable": "lum",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 582248719382282,
+							"parameters": {
+								"effect": "\"NiveauxDeGris\"",
+								"parameter-index": "0",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 236111718899739,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 316337528903341
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 946262484097403
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 127736935165617,
+							"parameters": {
+								"first-value": "lum",
+								"comparison": 1,
+								"second-value": "100"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 103990140994569,
+							"parameters": {
+								"variable": "isDead",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 769548357011857,
+							"parameters": {
+								"variable": "isEnd",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 315659595738546,
+							"parameters": {
+								"variable": "lum",
+								"value": "lum+1"
+							}
+						},
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 697162821437512,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "lum"
+							}
+						}
+					],
+					"sid": 459664942600678
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 639831292413376
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "mountains",
+							"sid": 235391274074494,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "clouds",
+							"sid": 952482795382111,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"sid": 645170354199169
+				}
+			],
+			"sid": 145200024080286
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Winter End Animation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "player",
+							"sid": 771552642836043,
+							"parameters": {
+								"object": "endTrigger"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 353710247582894,
+							"parameters": {
+								"variable": "isEnd",
+								"comparison": 1,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 537903260717835,
+							"parameters": {
+								"variable": "isEnd",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 996942622614809,
+							"parameters": {
+								"variable": "lum",
+								"value": "100"
+							}
+						}
+					],
+					"sid": 522524683606772
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 140234533972388
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 418974632344375,
+							"parameters": {
+								"variable": "isEnd",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 670749584603151,
+							"disabled": true,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 5,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 354647039487973,
+							"parameters": {
+								"effect": "\"Brightness\"",
+								"parameter-index": "0",
+								"value": "lum"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 595121209708735,
+							"parameters": {
+								"variable": "lum",
+								"value": "lum-1"
+							}
+						}
+					],
+					"sid": 854759809803960
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 601489949172264,
+							"parameters": {
+								"variable": "isEnd",
+								"comparison": 0,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 314496005572362,
+							"parameters": {
+								"variable": "lum",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 277711343432394,
+							"parameters": {
+								"layout": "spring_scene"
+							}
+						}
+					],
+					"sid": 320758197246958
+				}
+			],
+			"sid": 158957796899895
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Death Counter",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 399391112054072
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "deathCount",
+							"sid": 432835777991444,
+							"parameters": {
+								"x": "player.X+32",
+								"y": "player.Y-93"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "deathCount",
+							"sid": 459408961676010,
+							"parameters": {
+								"text": "deathCounter"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "scoreDisaplay",
+							"sid": 358516052133952,
+							"parameters": {
+								"x": "player.X-16",
+								"y": "player.Y-95"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "deathbackground",
+							"sid": 428741430957787,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y-96"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "pauseMenuButton",
+							"sid": 750684511032573,
+							"parameters": {
+								"x": "player.X-160",
+								"y": "player.Y-90"
+							}
+						}
+					],
+					"sid": 745101490059436
+				}
+			],
+			"sid": 778933204247768
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Menu Events",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 888443752623462,
+							"parameters": {
+								"key": 13
+							}
+						},
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 914521300936572,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "pauseMenuButton"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 882393916970224,
+							"parameters": {
+								"effect": "\"NiveauxDeGris\"",
+								"parameter-index": "0",
+								"value": "100"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 181889718278745,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 954220009444738,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "escapeMenucontinue",
+							"sid": 100183742103626,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "escapeMenurestart",
+							"sid": 378541160109593,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y+escapeMenucontinue.Height+4"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "escapeMenuleave",
+							"sid": 657111840615221,
+							"parameters": {
+								"x": "player.X",
+								"y": "player.Y+escapeMenurestart.Height+24"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenurestart",
+							"sid": 817858926068611,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenuleave",
+							"sid": 486034625324637,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenucontinue",
+							"sid": 496833786242730,
+							"parameters": {
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 951337358731823,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 916326459803844,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "escapeMenucontinue"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 273795964362230,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 464804743156301,
+							"parameters": {
+								"effect": "\"NiveauxDeGris\"",
+								"parameter-index": "0",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 396570936289846,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 110185735840652,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenucontinue",
+							"sid": 418195473760258,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenuleave",
+							"sid": 779034801870108,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenurestart",
+							"sid": 223802709242732,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 387347669967301,
+							"parameters": {
+								"variable": "currentAnimation",
+								"value": "\"\""
+							}
+						}
+					],
+					"sid": 555019627558209
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 916939071628342,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "escapeMenurestart"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 335086619123379,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 752233820391927,
+							"parameters": {
+								"effect": "\"NiveauxDeGris\"",
+								"parameter-index": "0",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 843104598948038,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 989106377739654,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenucontinue",
+							"sid": 770120040965950,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenurestart",
+							"sid": 213147569519452,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenuleave",
+							"sid": 450248294165648,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 751415106378094,
+							"parameters": {
+								"variable": "lum",
+								"value": "0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 634142981770961,
+							"parameters": {
+								"layout": "winter_scene"
+							}
+						}
+					],
+					"sid": 161807763980746
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 105987762596465,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "escapeMenuleave"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 470834951017780,
+							"parameters": {
+								"variable": "onPauseMenu",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layout-effect-parameter",
+							"objectClass": "System",
+							"sid": 815364600339133,
+							"parameters": {
+								"effect": "\"NiveauxDeGris\"",
+								"parameter-index": "0",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 648875618110600,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenucontinue",
+							"sid": 782703569269748,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenurestart",
+							"sid": 732044537544208,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "escapeMenuleave",
+							"sid": 708857560473240,
+							"parameters": {
+								"opacity": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 924793476754199,
+							"parameters": {
+								"variable": "lum",
+								"value": "0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 567977199803268,
+							"parameters": {
+								"layout": "menu_scene"
+							}
+						}
+					],
+					"sid": 774880015131653
+				}
+			],
+			"sid": 909707219328180
+		}
+	],
+	"sid": 928926317639104
+}

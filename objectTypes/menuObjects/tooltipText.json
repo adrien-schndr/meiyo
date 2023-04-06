@@ -1,0 +1,65 @@
+{
+	"name": "tooltipText",
+	"plugin-id": "Sprite",
+	"sid": 114870370147017,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Orbit",
+			"name": "Orbit",
+			"sid": 479199175110221
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 195253967769654
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "brightness",
+			"name": "Brightness"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 324,
+						"height": 16,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2946839,
+						"collisionPoly": {
+							"points": [
+								0.05555555555555555,
+								0.0625,
+								0.7222222222222222,
+								0.0625,
+								0.941358024691358,
+								0.9375,
+								0.05555555555555555,
+								0.9375
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 314547193698860,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

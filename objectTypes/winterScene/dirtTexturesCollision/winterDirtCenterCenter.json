@@ -1,0 +1,26 @@
+{
+	"name": "winterDirtCenterCenter",
+	"plugin-id": "TiledBg",
+	"sid": 824617283035224,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 970678990544282
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 16,
+		"height": 16,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8561128,
+		"useCollisionPoly": true
+	}
+}

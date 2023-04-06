@@ -1,0 +1,63 @@
+{
+	"name": "winterArchTopLeft",
+	"plugin-id": "Sprite",
+	"sid": 123640033679852,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 213682150353103
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1125095,
+						"collisionPoly": {
+							"points": [
+								0.125,
+								0.15625,
+								0.03125,
+								0.15625,
+								0.031249999999999917,
+								0,
+								1,
+								0,
+								1,
+								0.25,
+								0.3125,
+								0.25,
+								0.1875,
+								0.25,
+								0.125,
+								0.25
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 488171038922421,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

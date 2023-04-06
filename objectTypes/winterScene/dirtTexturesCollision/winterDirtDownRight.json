@@ -1,0 +1,26 @@
+{
+	"name": "winterDirtDownRight",
+	"plugin-id": "TiledBg",
+	"sid": 529895485345243,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 310959944808841
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 16,
+		"height": 16,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 8079206,
+		"useCollisionPoly": true
+	}
+}
